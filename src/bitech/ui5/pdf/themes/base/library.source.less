@@ -1,0 +1,80 @@
+/*!
+ * ${copyright}
+ */
+
+ @import "../../../../../sap/ui/core/themes/base/base.less";
+ @import "../../../../../sap/ui/core/themes/base/global.less";
+ 
+@bitechUi5PdfPreviewBorderWidth: 0.5rem;
+@bitechUi5PdfStickybackground: whitesmoke;
+
+.bitechUi5PdfPage {
+	margin: 0 auto;
+}
+.bitechUi5PdfDocument {
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+}
+.bitechUi5PdfStickyContent {
+	height: ~"calc(100% - 48px)";
+}
+
+.bitechUi5PdfSelected {
+	border: @bitechUi5PdfPreviewBorderWidth solid lightgray;
+	padding: 0;
+	cursor: default;
+}
+
+.bitechUi5PdfPreview {
+	height: 100%;
+	width: 10%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	overflow-y: scroll;
+	
+	.bitechUi5PdfPage {
+		width: 60%;
+		padding: @bitechUi5PdfPreviewBorderWidth 0;
+
+		&:hover {
+			cursor: pointer;
+			.bitechUi5PdfSelected();
+		}
+	}
+
+	.bitechUi5PdfSelected {
+		.bitechUi5PdfSelected();
+	}
+}
+
+.bitechUi5PdfPages {
+	height: 100%;
+	width: 90%;
+	margin-left: 10%;
+	overflow-y: scroll;
+	
+	.bitechUi5PdfPage {
+		padding: @bitechUi5PdfPreviewBorderWidth 0;
+	}
+}
+
+.bitechUi5PdfZoomOut {
+	margin-left: 3rem;
+}
+.bitechUi5PdfPageNumInput {
+	width: 4em;
+}
+.bitechUi5PdfStickyHeader {
+	position: sticky;
+	top: 0;
+	background-color: @bitechUi5PdfStickybackground;
+}
+.bitechUi5PdfStickyFooter {
+	position: sticky;
+	bottom: 0;
+	background-color: @bitechUi5PdfStickybackground;
+}

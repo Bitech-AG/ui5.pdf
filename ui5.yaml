@@ -1,0 +1,30 @@
+specVersion: '0.1'
+metadata:
+  name: pdf
+type: library
+---
+specVersion: "0.1"
+kind: extension
+type: project-shim
+metadata:
+  name: bitech.ui5.pdf.pdfjs
+shims:
+  configurations:
+    pdfjs-dist:
+      specVersion: "0.1"
+      type: module
+      metadata:
+        name: pdfjs-dist
+      resources:
+        configuration:
+          paths:
+            /resources/bitech/ui5/pdf/pdfjs: ""
+---
+specVersion: "1.0"
+kind: extension
+type: server-middleware
+metadata:
+  name: express-less
+middleware:
+  path: node_modules/express-less
+  mountPath: "resources"
