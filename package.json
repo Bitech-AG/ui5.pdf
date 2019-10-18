@@ -1,6 +1,6 @@
 {
-  "name": "pdf",
-  "version": "0.3.0",
+  "name": "@bitech-ag/ui5.pdf",
+  "version": "0.4.0",
   "description": "UI5 Controls for rendering pdf files from services",
   "repository": {
     "type": "git",
@@ -31,6 +31,8 @@
   },
   "scripts": {
     "start": "ui5 serve -o test-resources/bitech/ui5/pdf/demo/index.html",
-    "build": "ui5 build"
+    "build": "ui5 build",
+    "prepare": "npm run build",
+    "publish": "npm publish --access public --tag alpha"
   }
 }
