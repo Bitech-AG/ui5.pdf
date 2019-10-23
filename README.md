@@ -18,7 +18,7 @@ With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), 
 
 With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), it is very easy to integrate open source bibliotics like this into your own applications. You do not need to copy files to your applications. If your app is older and does not have a Ui5.yaml file, you can create this file with [UI5 Cli] (https://sap.github.io/ui5-tooling/pages/GettingStarted).
 
-1. Insert this repository as a dependency in your Package.json.
+1. Insert this repository as a dependency in your Package.json. If you do not have a dependencies node in your package.json, add it at the top level.
 ```sh
 dependencies: {
 ...
@@ -50,7 +50,7 @@ shims:
           paths:
             /resources/bitech/ui5/pdf: ""
 ```
-Do not forget the three dashes!
+Do not forget the three dashes! If necessary you have to adapt the SpecVersion to that of your app.
 
 3. Now you can integrate the control into your views.
 ```sh
@@ -63,5 +63,39 @@ Do not forget the three dashes!
 ...
 </mvc:View>
 ```
+At the moment you can not embed the control in the WebIDE, see #16.
+
 
 ## How do you contribute to the project?
+
+You like our code and you want to get involved with us? You're welcome.
+
+1. install nodejs and npm, see [nodejs](https://nodejs.org/en/download/)
+2. install git, see [git](https://git-scm.com/downloads)
+3. clone the repo
+```sh
+git clone https://github.com/Bitech-AG/ui5.pdf.git
+```
+4. install dependencies and link the library and consumer project
+```sh
+cd ui5.pdf
+npm install
+npm link
+
+cd consumer
+npm install
+npm link @bitech-ag/ui5.pdf
+```
+5. Start the consumer app
+```sh
+npm start
+```
+
+## License
+
+MIT
+
+## Author
+[<img src="https://bitech.ag/images/icon_netweaver_gr.png">](https://bitech.ag/netweaver-technologies.html)
+[Business Technologies](https://bitech.ag/netweaver-technologies.html)
+[Bitech AG Leverkusen](https://www.bitech.ag)
