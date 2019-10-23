@@ -1,0 +1,44 @@
+specVersion: '1.0'
+metadata:
+  name: file
+type: application
+builder:
+  customTasks:
+    - name: webide-extension-task-updateNeoApp
+      afterTask: generateVersionInfo
+      configuration:
+        destDir: dist
+        appFolder: webapp
+        nameSpace: ui5lab/rm
+    - name: webide-extension-task-updateManifestJson
+      afterTask: webide-extension-task-updateNeoApp
+      configuration:
+        appFolder: webapp
+        destDir: dist
+    - name: webide-extension-task-lint
+      afterTask: webide-extension-task-updateManifestJson
+      configuration:
+        destDir: dist
+        appFolder: webapp
+        nameSpace: ui5lab/rm 
+    - name: webide-extension-task-resources
+      afterTask: webide-extension-task-lint
+      configuration:
+        nameSpace: ui5lab/rm
+---
+specVersion: "0.1"
+kind: extension
+type: project-shim
+metadata:
+  name: bitech.ui5.pdf
+shims:
+  configurations:
+    pdfjs-dist:
+      specVersion: "0.1"
+      type: module
+      metadata:
+        name: "@bitech-ag/ui5.pdf"
+      resources:
+        configuration:
+          paths:
+            /resources/bitech/ui5/pdf: ""
