@@ -1,5 +1,3 @@
-# We are currently working on the publication. This version may not be usable.
-
 # ui5.pdf
 This library contains a number of controls. The main control is the "Viewer". With the help of this control you can integrate the PDF ad into your apps. The presentation of the PDF is done using the Mozilla [PDF.js](https://mozilla.github.io/pdf.js) library. This library has been seamlessly integrated into the control, so there are no problems with the controls' Ui5 lifecycle.
 
@@ -14,7 +12,7 @@ Nabisoft offers another viewer in UI5Lab [Nabi Mobile] (https://ui5lab.io/browse
 And last but not least, there is the viewer from Wouter Lemaire [
 PDF library] (https://ui5lab.io/browser/index.html#/Samples/ui5lab.wl.pdf). This also uses the PDF.js for rendering. However, he only renders a page. When switching to the next page, the next page overwrites the contents of the Canvas. In our version we have kept more of the original.
 
-## How do I integrate the viewer into my application?
+## How do you integrate the viewer into my application?
 
 With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), it is very easy to integrate open source libraries like this into your own applications.
 
@@ -24,13 +22,46 @@ With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), 
 ```sh
 dependencies: {
 ...
-"bitech.ui5.pdf": "^0.4.1"
+"bitech.ui5.pdf": "latest"
 ...
 }
 ```
 or you use the command line
 ```sh
-npm install bitech.ui5.pdf --save
+npm install @bitech-ag/ui5.pdf --save
+```
+2. Extend your ui5.yaml file with
+```sh
+---
+specVersion: "0.1"
+kind: extension
+type: project-shim
+metadata:
+  name: bitech.ui5.pdf
+shims:
+  configurations:
+    pdfjs-dist:
+      specVersion: "0.1"
+      type: module
+      metadata:
+        name: "@bitech-ag/ui5.pdf"
+      resources:
+        configuration:
+          paths:
+            /resources/bitech/ui5/pdf: ""
+```
+Do not forget the three dashes!
+
+3. Now you can integrate the control into your views.
+```sh
+<mvc:View ... xmlns:pdf="bitech.ui5.pdf">
+...
+<pdf:Viewer src="some.pdf" ></pdf:Viewer>
+<!-- or 
+<pdf:Viewer />
+-->
+...
+</mvc:View>
 ```
 
-
+## How do you contribute to the project?
