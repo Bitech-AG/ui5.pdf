@@ -20,7 +20,7 @@ shims:
           paths:
             /resources/bitech/ui5/pdf/pdfjs: ""
 ---
-specVersion: "1.0"
+specVersion: "0.1"
 kind: extension
 type: server-middleware
 metadata:
