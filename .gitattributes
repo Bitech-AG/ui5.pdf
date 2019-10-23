@@ -3,3 +3,4 @@
 *.json eol=lf
 *.jpeg -text
 *.png -text
+*.pdf -text

@@ -1,4 +1,3 @@
-/src
 /test
 .git*
-/dist/test-resources
+/dist

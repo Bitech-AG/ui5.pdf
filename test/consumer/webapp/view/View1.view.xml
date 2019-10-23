@@ -1,0 +1,13 @@
+<mvc:View controllerName="ui5lab.rm.file.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:pdf="bitech.ui5.pdf">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<pdf:Viewer src="Checkliste-Barrierefreies-PDF.pdf" ></pdf:Viewer>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

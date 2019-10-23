@@ -24,12 +24,13 @@ With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), 
 ```sh
 dependencies: {
 ...
-"bitech.ui5.pdf": "1.0.0"
+"bitech.ui5.pdf": "^0.4.1"
 ...
+}
 ```
 or you use the command line
 ```sh
-npm install @bitech/ui5.pdf --save
+npm install bitech.ui5.pdf --save
 ```
 
 

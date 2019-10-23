@@ -1,0 +1,20 @@
+{
+  "name": "file",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "devDependencies": {
+    "@ui5/cli": "1.7.0"
+  },
+  "scripts": {
+    "build": "ui5 build --clean-dest",
+    "start": "ui5 serve -o index.html"
+  },
+  "dependencies": {
+    "@openui5/sap.m": "^1.60.18",
+    "@openui5/sap.ui.core": "^1.66.00",
+    "@openui5/sap.ui.unified": "^1.60.18",
+    "@openui5/themelib_sap_belize": "^1.60.18",
+    "@bitech-ag/ui5.pdf": "latest"
+  }
+}
