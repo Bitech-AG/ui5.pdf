@@ -96,6 +96,6 @@ npm start
 MIT
 
 ## Author
-[<img src="https://bitech.ag/images/icon_netweaver_gr.png">](https://bitech.ag/netweaver-technologies.html)
+[<img src="https://bitech.ag/images/icon_netweaver_gr.png">](https://bitech.ag/netweaver-technologies.html)  
 *[Business Technologies](https://bitech.ag/netweaver-technologies.html)*  
 **[Bitech AG Leverkusen](https://www.bitech.ag)**
