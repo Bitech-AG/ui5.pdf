@@ -1,6 +1,6 @@
 {
   "name": "@bitech-ag/ui5.pdf",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "UI5 Controls for rendering pdf files from services",
   "repository": {
     "type": "git",
@@ -26,8 +26,7 @@
     "pdfjs-dist": "^2.1.266"
   },
   "devDependencies": {
-    "@ui5/cli": "^1.10.0",
-    "express-less": "^0.1.0"
+    "@ui5/cli": "^1.10.0"
   },
   "scripts": {
     "start": "cd consumer && npm run start",

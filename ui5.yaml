@@ -19,12 +19,3 @@ shims:
         configuration:
           paths:
             /resources/bitech/ui5/pdf/pdfjs: ""
----
-specVersion: "0.1"
-kind: extension
-type: server-middleware
-metadata:
-  name: express-less
-middleware:
-  path: node_modules/express-less
-  mountPath: "resources"
