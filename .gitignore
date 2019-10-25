@@ -74,3 +74,8 @@ APIExternalProducer.js
 .*/APIExternalProducer.js
 /mta_archives/
 /dist/
+
+# For WebIDE support
+!/dist/resources/bitech/ui5/pdf/library-preload.js
+!/node_modules/pdfjs-dist/build/pdf.min.js
+!/node_modules/pdfjs-dist/build/pdf.worker.min.js

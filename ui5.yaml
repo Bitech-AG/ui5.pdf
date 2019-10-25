@@ -7,7 +7,7 @@ specVersion: "0.1"
 kind: extension
 type: project-shim
 metadata:
-  name: bitech.ui5.pdf.pdfjs
+  name: bitech.ui5.pdf
 shims:
   configurations:
     pdfjs-dist:
@@ -18,4 +18,4 @@ shims:
       resources:
         configuration:
           paths:
-            /resources/bitech/ui5/pdf/pdfjs: ""
+            /resources/bitech/ui5/pdf: ""

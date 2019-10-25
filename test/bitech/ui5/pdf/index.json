@@ -1,0 +1,28 @@
+{
+	"bitech.ui5.pdf": {
+		"icon": "sap-icon://pdf-reader",
+		"name": "Bitech PDF viewer",
+		"description": "A PDF viewer control. For display, a local document or a document can be specified by the service.",
+		"source" : "https://github.com/Bitech-AG/ui5.pdf.git",
+		"documentation": "https://github.com/Bitech-AG/ui5.pdf/blob/master/README.md",
+		"demo": "https://demo-ad538ec20.dispatcher.hana.ondemand.com",
+		"license": "MIT",
+		"version": 1.0,
+		"content": {
+			"PDF Viewer": {
+				"id": "viewer",
+				"name": "PDF Viewer",
+				"type": "control",
+				"version": 1.1,
+				"description": " PDF viewer control. For display, a local document or a document can be specified by the service",
+				"samples": [
+					{
+						"id": "emptyViewer",
+						"name": "Empty Viewer",
+						"description": "Empty Viewer for uploading files"
+					}
+				]
+			}
+		}
+	}
+}

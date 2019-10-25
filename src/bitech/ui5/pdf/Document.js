@@ -1,7 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/Control",
 	"sap/ui/unified/FileUploader",
-	"bitech/ui5/pdf/pdfjs/build/pdf.min",
+	"bitech/ui5/pdf/pdf.min",
 	"bitech/ui5/pdf/Page"
 ], function (Control, FileUploader, pdf, Page) {
 	"use strict";
@@ -74,7 +74,7 @@ sap.ui.define([
 			this.setBusy(true);
 			/* global pdfjsLib:true */
 			// pdf.js version v 2.1.266
-			pdfjsLib.GlobalWorkerOptions.workerSrc = "/resources/bitech/ui5/pdf/pdfjs/build/pdf.worker.min.js";
+			pdfjsLib.GlobalWorkerOptions.workerSrc = "/resources/bitech/ui5/pdf/pdf.worker.min.js";
 			pdfjsLib.getDocument(this.getSrc()).promise.then(function (oPdf) {
 				var oPage, oPagePreview;
 
