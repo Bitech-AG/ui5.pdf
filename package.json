@@ -26,9 +26,10 @@
     "pdfjs-dist": "^2.1.266"
   },
   "devDependencies": {
-    "@ui5/cli": "^1.11.0"
+    "@ui5/cli": "^1.10.0"
   },
   "scripts": {
+    "sample": "ui5 serve -o test-resources/bitech/ui5/pdf/sample/index.html",
     "start": "cd consumer && npm run start",
     "build": "ui5 build --clean-dest"
   }

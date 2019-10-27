@@ -47,15 +47,19 @@ Do not forget the three dashes! If necessary you have to adapt the SpecVersion t
 
 ### The way of WebIDE
 
-1. create follow folder structure
+1. create follow folder structure and upload the files
 ```sh
 - webapp
 - - bitech
 - - - ui5
 - - - - pdf
+- - - - - [library-preload.js](./blob/master/webide/library-preload.js)
+- - mozilla
+- - - pdf
+- - - - build
+- - - - - [pdf.min.js](./blob/master/webide/pdf.min.js)
+- - - - - [pdf.worker.min.js](./blob/master/webide/pdf.worker.min.js)
 ```
-
-2. Copy [pdf.min.js](./blob/master/node_modules/pdfjs-dist/build/pdf.min.js), [pdf.worker.min.js](./blob/master/node_modules/pdfjs-dist/build/pdf.worker.min.js), and [library-preload.js](./blob/master/dist/resources/bitech/ui5/pdf/library-preload.js) in pdf folder.
 
 3. Extend the manifest.json
 ```sh
@@ -69,18 +73,13 @@ Do not forget the three dashes! If necessary you have to adapt the SpecVersion t
 ...
 				"bitech.ui5.pdf": {}
 ...
+			}
+		},
+...,
+		"resourceRoots": {
+			"bitech.ui5.pdf": "./bitech/ui5/pdf"
+		},
       },
-...
-		"resources": {
-...
-			"js": [
-				{
-					"uri": "bitech/ui5/pdf/pdf.min.js"
-				},
-				{
-					"uri": "bitech/ui5/pdf/pdf.worker.min.js"
-				}
-			]
 ```
 
 ### Using in views

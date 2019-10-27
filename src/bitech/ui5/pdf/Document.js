@@ -1,7 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/Control",
 	"sap/ui/unified/FileUploader",
-	"bitech/ui5/pdf/pdf.min",
+	"bitech/ui5/pdf/build/pdf.min",
 	"bitech/ui5/pdf/Page"
 ], function (Control, FileUploader, pdf, Page) {
 	"use strict";
@@ -72,9 +72,28 @@ sap.ui.define([
 
 		loadDocument: function (sSource) {
 			this.setBusy(true);
+
+			var oCore = sap.ui.getCore(),
+				oBundle = oCore.getLibraryResourceBundle("bitech.ui5.pdf"),
+				sModulePath;
+
+			if(oBundle) {
+				// library is bounded
+				sModulePath = oBundle.oUrlInfo.url.replace("messagebundle.properties", "");
+
+			} else {
+				for(var i=0; i < document.scripts.length; ++i) {
+					if(document.scripts[i].src.search("/bitech/ui5/pdf") > - 1) {
+						sModulePath = document.scripts[4].src.replace(window.location.origin, "").replace("library-preload.js", "");
+						console.log(sModulePath);
+						break;
+					}
+				}
+
+			}
 			/* global pdfjsLib:true */
 			// pdf.js version v 2.1.266
-			pdfjsLib.GlobalWorkerOptions.workerSrc = "/resources/bitech/ui5/pdf/pdf.worker.min.js";
+			pdfjsLib.GlobalWorkerOptions.workerSrc = sModulePath + "build/pdf.worker.min.js";
 			pdfjsLib.getDocument(this.getSrc()).promise.then(function (oPdf) {
 				var oPage, oPagePreview;
 

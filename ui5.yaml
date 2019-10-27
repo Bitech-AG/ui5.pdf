@@ -1,9 +1,9 @@
-specVersion: '0.1'
+specVersion: '1.0'
 metadata:
   name: pdf
 type: library
 ---
-specVersion: "0.1"
+specVersion: "1.0"
 kind: extension
 type: project-shim
 metadata:
@@ -11,11 +11,11 @@ metadata:
 shims:
   configurations:
     pdfjs-dist:
-      specVersion: "0.1"
+      specVersion: "1.0"
       type: module
       metadata:
         name: pdfjs-dist
       resources:
         configuration:
           paths:
-            /resources/bitech/ui5/pdf: ""
+            /resources/bitech/ui5/pdf/: ""

@@ -17,7 +17,7 @@
 				"description": " PDF viewer control. For display, a local document or a document can be specified by the service",
 				"samples": [
 					{
-						"id": "emptyViewer",
+						"id": "index",
 						"name": "Empty Viewer",
 						"description": "Empty Viewer for uploading files"
 					}
