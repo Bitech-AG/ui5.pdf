@@ -2,9 +2,15 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
+<<<<<<< HEAD
 				<Page>
 					<content>
 						<pdf:Viewer ></pdf:Viewer>
+=======
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<pdf:Viewer src="Checkliste-Barrierefreies-PDF.pdf" ></pdf:Viewer>
+>>>>>>> ce8629d636cdc05cdd8405af8f5d51033f6ff2e9
 					</content>
 				</Page>
 			</pages>

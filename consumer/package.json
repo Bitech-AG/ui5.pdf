@@ -4,7 +4,11 @@
   "description": "",
   "private": true,
   "devDependencies": {
+<<<<<<< HEAD
     "@ui5/cli": "1.10.0"
+=======
+    "@ui5/cli": "1.7.0"
+>>>>>>> ce8629d636cdc05cdd8405af8f5d51033f6ff2e9
   },
   "scripts": {
     "build": "ui5 build --clean-dest",
