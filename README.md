@@ -12,12 +12,12 @@ This library contains a number of controls. The main control is the "Viewer". Wi
 - - - ui5
 - - - - pdf
 - - - - - build
-- - - - - - [pdf.min.js](./blob/master/src/bitech/ui5/pdf/build/pdf.min.js)
-- - - - - - [pdf.worker.min.js](./blob/master/src/bitech/ui5/pdf/build/pdf.worker.min.js)
-- - - - - [library-preload.js](./blob/master/webide/library-preload.js)
+- - - - - - [pdf.min.js](./src/bitech/ui5/pdf/build/pdf.min.js)
+- - - - - - [pdf.worker.min.js](./src/bitech/ui5/pdf/build/pdf.worker.min.js)
+- - - - - [library-preload.js](./webide/library-preload.js)
 
 
-2. Extend the manifest.json
+1. Extend the manifest.json
 ```sh
 {
 ...
