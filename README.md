@@ -5,63 +5,19 @@ This library contains a number of controls. The main control is the "Viewer". Wi
 
 ## How do you integrate the viewer into my application?
 
-### The way of open source
-
-With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), it is very easy to integrate open source libraries like this into your own applications.
-
-With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), it is very easy to integrate open source bibliotics like this into your own applications. You do not need to copy files to your applications. If your app is older and does not have a Ui5.yaml file, you can create this file with [UI5 Cli] (https://sap.github.io/ui5-tooling/pages/GettingStarted).
-
-1. Insert this repository as a dependency in your Package.json. If you do not have a dependencies node in your package.json, add it at the top level.
-```sh
-dependencies: {
-...
-"bitech.ui5.pdf": "latest"
-...
-}
-```
-or you use the command line
-```sh
-npm install @bitech-ag/ui5.pdf --save
-```
-2. Extend your ui5.yaml file with
-```sh
----
-specVersion: "0.1"
-kind: extension
-type: project-shim
-metadata:
-  name: bitech.ui5.pdf
-shims:
-  configurations:
-    pdfjs-dist:
-      specVersion: "0.1"
-      type: module
-      metadata:
-        name: "@bitech-ag/ui5.pdf"
-      resources:
-        configuration:
-          paths:
-            /resources/bitech/ui5/pdf: ""
-```
-Do not forget the three dashes! If necessary you have to adapt the SpecVersion to that of your app.
-
-### The way of WebIDE
-
 1. create follow folder structure and upload the files
 ```sh
 - webapp
 - - bitech
 - - - ui5
 - - - - pdf
+- - - - - build
+- - - - - - [pdf.min.js](./blob/master/src/bitech/ui5/pdf/build/pdf.min.js)
+- - - - - - [pdf.worker.min.js](./blob/master/src/bitech/ui5/pdf/build/pdf.worker.min.js)
 - - - - - [library-preload.js](./blob/master/webide/library-preload.js)
-- - mozilla
-- - - pdf
-- - - - build
-- - - - - [pdf.min.js](./blob/master/webide/pdf.min.js)
-- - - - - [pdf.worker.min.js](./blob/master/webide/pdf.worker.min.js)
 ```
 
-3. Extend the manifest.json
+2. Extend the manifest.json
 ```sh
 {
 ...
@@ -95,8 +51,6 @@ Now you can integrate the control into your views.
 ...
 </mvc:View>
 ```
-At the moment you can not embed the control in the WebIDE, see #16.
-
 
 ## How do you contribute to the project?
 

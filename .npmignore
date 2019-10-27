@@ -1,4 +1,4 @@
 .git*
-/dist
 /consumer
 /webide
+ui5.yaml
