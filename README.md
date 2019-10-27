@@ -6,7 +6,7 @@ This library contains a number of controls. The main control is the "Viewer". Wi
 ## How do you integrate the viewer into my application?
 
 1. create follow folder structure and upload the files
-```sh
+
 - webapp
 - - bitech
 - - - ui5
@@ -15,7 +15,7 @@ This library contains a number of controls. The main control is the "Viewer". Wi
 - - - - - - [pdf.min.js](./blob/master/src/bitech/ui5/pdf/build/pdf.min.js)
 - - - - - - [pdf.worker.min.js](./blob/master/src/bitech/ui5/pdf/build/pdf.worker.min.js)
 - - - - - [library-preload.js](./blob/master/webide/library-preload.js)
-```
+
 
 2. Extend the manifest.json
 ```sh
