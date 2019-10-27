@@ -29,14 +29,8 @@
     "@ui5/cli": "^1.10.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "sample": "ui5 serve -o test-resources/bitech/ui5/pdf/sample/index.html",
     "start": "cd consumer && npm run start",
     "build": "ui5 build --clean-dest"
-=======
-    "start": "cd consumer && npm run start",
-    "build": "ui5 build --clean-dest",
-    "publish_me": "npm publish --access public"
->>>>>>> ce8629d636cdc05cdd8405af8f5d51033f6ff2e9
   }
 }
