@@ -19,14 +19,21 @@
     "email": "richard.martens@bitech.ag"
   },
   "dependencies": {
-    "@openui5/sap.ui.core": "^1.60.18",
-    "@openui5/sap.ui.unified": "^1.60.18",
-    "@openui5/themelib_sap_belize": "^1.71.0",
     "@openui5/sap.m": "^1.60.18",
-    "pdfjs-dist": "^2.1.266"
+    "pdfjs-dist": "^2.1.266",
+    "webpack": "^4.41.2",
+    "@openui5/themelib_sap_belize": "^1.71.0"
   },
   "devDependencies": {
-    "@ui5/cli": "^1.10.0"
+    "@ui5/cli": "^1.11.1",
+    "@openui5/sap.ui.core": "^1.60.18",
+    "@openui5/sap.ui.unified": "^1.60.18"
+  },
+  "ui5": {
+    "dependencies": {
+      "@openui5/sap.ui.core": "^1.60.18",
+      "@openui5/sap.ui.unified": "^1.60.18"
+    }
   },
   "scripts": {
     "sample": "ui5 serve -o test-resources/bitech/ui5/pdf/sample/index.html",
