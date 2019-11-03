@@ -36,8 +36,7 @@
     }
   },
   "scripts": {
-    "sample": "ui5 serve -o test-resources/bitech/ui5/pdf/sample/index.html",
-    "start": "cd consumer && npm run start",
+    "start": "ui5 serve -o test-resources/bitech/ui5/pdf/sample/index.html",
     "build": "ui5 build --clean-dest"
   }
 }
