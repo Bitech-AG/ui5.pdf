@@ -1,6 +1,6 @@
 {
   "name": "@bitech-ag/ui5.pdf",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "UI5 Controls for rendering pdf files from services",
   "repository": {
     "type": "git",
