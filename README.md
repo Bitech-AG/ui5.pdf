@@ -1,42 +1,44 @@
 # ui5.pdf
 This library contains a number of controls. The main control is the "Viewer". With the help of this control you can integrate the PDF ad into your apps. The presentation of the PDF is done using the Mozilla [PDF.js](https://mozilla.github.io/pdf.js) library. This library has been seamlessly integrated into the control, so there are no problems with the controls' Ui5 lifecycle.
 
-## [Demo](https://demo-ad538ec20.dispatcher.hana.ondemand.com)
+## [Demo](https://bitech-ag.github.io/ui5.pdf)
 
 ## How do you integrate the viewer into my application?
 
-1. create follow folder structure and upload the files
+With the new capabilities of [UI5 Tooling] (https://sap.github.io/ui5-tooling), it is very easy to integrate open source libraries like this into your own applications. You do not need to copy files to your applications. If your app is older and does not have a Ui5.yaml file, you can create this file with [UI5 Cli] (https://sap.github.io/ui5-tooling/pages/GettingStarted).
 
-- webapp
-- - bitech
-- - - ui5
-- - - - pdf
-- - - - - build
-- - - - - - [pdf.min.js](./src/bitech/ui5/pdf/build/pdf.min.js)
-- - - - - - [pdf.worker.min.js](./src/bitech/ui5/pdf/build/pdf.worker.min.js)
-- - - - - [library-preload.js](./webide/library-preload.js)
-
-
-1. Extend the manifest.json
+1. Insert this repository as a dependency in your Package.json.
 ```sh
-{
+dependencies: {
 ...
-	"sap.ui5": {
+"bitech.ui5.pdf": "1.0.0"
 ...
-		"dependencies": {
-...
-			"libs": {
-...
-				"bitech.ui5.pdf": {}
-...
-			}
-		},
-...,
-		"resourceRoots": {
-			"bitech.ui5.pdf": "./bitech/ui5/pdf"
-		},
-      },
 ```
+or you use the command line
+```sh
+npm install @bitech/ui5.pdf --save
+```
+2. Extend your ui5.yaml file with
+```sh
+---
+specVersion: "0.1"
+kind: extension
+type: project-shim
+metadata:
+  name: bitech.ui5.pdf
+shims:
+  configurations:
+    pdfjs-dist:
+      specVersion: "0.1"
+      type: module
+      metadata:
+        name: "@bitech-ag/ui5.pdf"
+      resources:
+        configuration:
+          paths:
+            /resources/bitech/ui5/pdf: ""
+ ```
+Do not forget the three dashes!
 
 ### Using in views
 
@@ -66,11 +68,6 @@ git clone https://github.com/Bitech-AG/ui5.pdf.git
 ```sh
 cd ui5.pdf
 npm install
-npm link
-
-cd consumer
-npm install
-npm link @bitech-ag/ui5.pdf
 ```
 5. Start the consumer app
 ```sh
