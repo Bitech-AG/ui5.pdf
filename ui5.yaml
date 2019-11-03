@@ -1,21 +1,21 @@
-specVersion: '1.0'
+specVersion: '0.1'
 metadata:
-  name: pdf
-type: library
---- # Everything below this line could also be put into the ui5.yaml of a standalone extension module
-specVersion: "1.0"
+  name: file
+type: application
+---
+specVersion: "0.1"
 kind: extension
 type: project-shim
 metadata:
-  name: mozilla.pdfjs
+  name: bitech.ui5.pdf
 shims:
   configurations:
-    pdfjs-dist: # name as defined in package.json
-      specVersion: "1.0"
-      type: module # Use module type
+    pdfjs-dist:
+      specVersion: "0.1"
+      type: module
       metadata:
-        name: pdfjs
+        name: "@bitech-ag/ui5.pdf"
       resources:
         configuration:
           paths:
-            /resources/mozilla/pdfjs/: "" # map root directory of loda
+            /resources/bitech/ui5/pdf: ""

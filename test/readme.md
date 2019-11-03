@@ -1,1 +1,0 @@
-the folder bitech and the file library.json are required for integration in ui5lab

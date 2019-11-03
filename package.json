@@ -1,43 +1,20 @@
 {
-  "name": "@bitech-ag/ui5.pdf",
-  "version": "1.1.3",
-  "description": "UI5 Controls for rendering pdf files from services",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Bitech-AG/ui5.pdf.git"
+  "name": "@bitech-ag/demo.ui5.pdf",
+  "version": "0.0.1",
+  "description": "Demo application for bitech.ui5.pdf library",
+  "private": false,
+  "devDependencies": {
+    "@ui5/cli": "1.11.1"
   },
-  "license": "MIT",
-  "keywords": [
-    "pdf",
-    "openui5",
-    "sapui5",
-    "ui5",
-    "javascript"
-  ],
-  "author": {
-    "name": "Richard Martens",
-    "email": "richard.martens@bitech.ag"
+  "scripts": {
+    "build": "ui5 build --clean-dest --all",
+    "start": "ui5 serve -o index.html"
   },
   "dependencies": {
     "@openui5/sap.m": "^1.60.18",
-    "pdfjs-dist": "^2.1.266",
-    "webpack": "^4.41.2",
-    "@openui5/themelib_sap_belize": "^1.71.0"
-  },
-  "devDependencies": {
-    "@ui5/cli": "^1.11.1",
-    "@openui5/sap.ui.core": "^1.60.18",
-    "@openui5/sap.ui.unified": "^1.60.18"
-  },
-  "ui5": {
-    "dependencies": {
-      "@openui5/sap.ui.core": "^1.60.18",
-      "@openui5/sap.ui.unified": "^1.60.18"
-    }
-  },
-  "scripts": {
-    "sample": "ui5 serve -o test-resources/bitech/ui5/pdf/sample/index.html",
-    "start": "cd consumer && npm run start",
-    "build": "ui5 build --clean-dest"
+    "@openui5/sap.ui.core": "^1.66.00",
+    "@openui5/sap.ui.unified": "^1.60.18",
+    "@openui5/themelib_sap_belize": "^1.60.18",
+    "@bitech-ag/ui5.pdf": "latest"
   }
 }

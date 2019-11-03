@@ -1,1 +1,0 @@
-this folder is required for integration in ui5lab
