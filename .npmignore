@@ -1,6 +1,4 @@
 .git*
-/consumer
-/src
 ui5.yaml
 /webide
 
