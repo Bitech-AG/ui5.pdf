@@ -4,3 +4,10 @@
 *.jpeg -text
 *.png -text
 *.pdf -text
+*.svg -text
+*.hpb -text
+*.gif -text
+*.woff -text
+*.woff2 -text
+*.ttf -text
+*.bcmap -text

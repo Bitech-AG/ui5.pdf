@@ -1,0 +1,44 @@
+{
+  "_version": "1.9.0",
+  "sap.app": {
+    "id": "bitech.ui5.pdf",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.1.5"
+    },
+    "title": "PDF viewer",
+    "description": "PDF viewer",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": [
+      "base"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.71",
+      "libs": {
+        "sap.m": {
+          "minVersion": "1.71.3"
+        }
+      }
+    },
+    "library": {
+      "i18n": "messagebundle.properties",
+      "content": {
+        "controls": [
+          "src.bitech.ui5.pdf.Document",
+          "src.bitech.ui5.pdf.Page",
+          "src.bitech.ui5.pdf.Viewer"
+        ],
+        "elements": [],
+        "types": [],
+        "interfaces": []
+      }
+    }
+  }
+}

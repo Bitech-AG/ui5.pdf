@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+
+	<name>bitech.ui5.pdf</name>
+	<version>1.1.5</version>
+
+	<documentation>PDF viewer</documentation>
+
+	<dependencies>
+		<dependency>
+			<libraryName>sap.m</libraryName>
+		</dependency>
+	</dependencies>
+
+	<appData>
+	</appData>
+
+</library>

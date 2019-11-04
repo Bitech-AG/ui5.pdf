@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("bitech.demo.ui5.pdf.controller.View1",{onInit:function(){}})});
