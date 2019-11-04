@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"ui5lab/rm/file/controller/View1.controller"
+	"bitech/demo/ui5/pdf/controller/View1.controller"
 ], function (Controller) {
 	"use strict";
 

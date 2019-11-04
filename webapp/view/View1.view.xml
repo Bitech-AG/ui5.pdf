@@ -1,4 +1,4 @@
-<mvc:View controllerName="ui5lab.rm.file.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:pdf="bitech.ui5.pdf">
+<mvc:View controllerName="bitech.demo.ui5.pdf.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:pdf="bitech.ui5.pdf">
 	<Shell id="shell">
 		<App id="app">
 			<pages>

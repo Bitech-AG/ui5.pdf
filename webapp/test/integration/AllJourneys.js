@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "ui5lab.rm.file.view.",
+		viewNamespace: "bitech.demo.ui5.pdf.view.",
 		autoWait: true
 	});
 });

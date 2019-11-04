@@ -1,5 +1,5 @@
 sap.ui.define([
-	"ui5lab/rm/file/test/unit/controller/View1.controller"
+	"bitech/demo/ui5/pdf/test/unit/controller/View1.controller"
 ], function () {
 	"use strict";
 });

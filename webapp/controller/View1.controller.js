@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 
-	return Controller.extend("ui5lab.rm.file.controller.View1", {
+	return Controller.extend("bitech.demo.ui5.pdf.controller.View1", {
 		onInit: function () {
 
 		}

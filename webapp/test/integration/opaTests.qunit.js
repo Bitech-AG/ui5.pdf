@@ -5,7 +5,7 @@ sap.ui.getCore().attachInit(function () {
 	"use strict";
 
 	sap.ui.require([
-		"ui5lab/rm/file/test/integration/AllJourneys"
+		"bitech/demo/ui5/pdf/test/integration/AllJourneys"
 	], function () {
 		QUnit.start();
 	});
