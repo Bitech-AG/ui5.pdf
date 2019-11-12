@@ -56,7 +56,7 @@ sap.ui.define([
 
                 oRm.write("</div>");
             }
-            
+
             oControl._renderAggregation("footer", "bitechUi5PdfStickyFooter", oRm, oControl);
 
             oRm.write("</div>");

@@ -17,9 +17,6 @@
 	box-sizing: border-box;
 	height: 100%;
 }
-.bitechUi5PdfStickyContent {
-	height: ~"calc(100% - 48px)";
-}
 
 .bitechUi5PdfSelected {
 	border: @bitechUi5PdfPreviewBorderWidth solid lightgray;
@@ -69,12 +66,18 @@
 	width: 4em;
 }
 .bitechUi5PdfStickyHeader {
-	position: sticky;
+	position: absolute;
 	top: 0;
-	background-color: @bitechUi5PdfStickybackground;
+	left: 0;
+	right: 0;
+}
+.bitechUi5PdfStickyContent {
+	height: ~"calc(100% - 48px)";
+	margin-top: 48px;
 }
 .bitechUi5PdfStickyFooter {
-	position: sticky;
+	position: absolute;
 	bottom: 0;
-	background-color: @bitechUi5PdfStickybackground;
+	left: 0;
+	right: 0;
 }
