@@ -16,7 +16,6 @@
                 <ToolbarSpacer />
                 <Title text="{$this>title}" visible="{= ${$this>title} ? true : false}" level="H1" textAlign="Center" titleStyle="H1" />
                 <ToolbarSpacer />
-
                 <uni:FileUploader buttonOnly="true" iconOnly="true" icon="sap-icon://upload" fileType="pdf" mimeType="application/pdf" change="_uploadFile" >
                 </uni:FileUploader>
             </Toolbar>
