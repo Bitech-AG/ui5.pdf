@@ -6,19 +6,15 @@
  @import "../../../../../sap/ui/core/themes/base/global.less";
  
 @bitechUi5PdfPreviewBorderWidth: 0.5rem;
-@bitechUi5PdfStickybackground: whitesmoke;
+@bitechUi5PdfContainerBackground: whitesmoke;
 
 .bitechUi5PdfPage {
 	margin: 0 auto;
 }
 .bitechUi5PdfDocument {
 	text-align: center;
-	position: relative;
 	box-sizing: border-box;
 	height: 100%;
-}
-.bitechUi5PdfStickyContent {
-	height: ~"calc(100% - 48px)";
 }
 
 .bitechUi5PdfSelected {
@@ -68,13 +64,21 @@
 .bitechUi5PdfPageNumInput {
 	width: 4em;
 }
-.bitechUi5PdfStickyHeader {
-	position: sticky;
+.bitechUi5PdfContainerHeader {
+	position: absolute;
 	top: 0;
-	background-color: @bitechUi5PdfStickybackground;
+	left: 0;
+	right: 0;
+	background-color: @bitechUi5PdfContainerBackground;
 }
-.bitechUi5PdfStickyFooter {
-	position: sticky;
+.bitechUi5PdfContainerContent {
+	height: ~"calc(100% - 48px)";
+	position: relative;
+	top: 48px;
+}
+.bitechUi5PdfContainerFooter {
+	position: absolute;
 	bottom: 0;
-	background-color: @bitechUi5PdfStickybackground;
+	left: 0;
+	right: 0;
 }

@@ -2108,7 +2108,7 @@
 				"GyM": {
 					"G": "GGGGG y-MM – GGGGG y-MM",
 					"M": "GGGGG y-MM – y-MM",
-					"y": "GGGGG y-MM ��� y-MM"
+					"y": "GGGGG y-MM – y-MM"
 				},
 				"GyMd": {
 					"d": "GGGGG y-MM-dd – y-MM-dd",

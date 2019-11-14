@@ -1,37 +1,37 @@
 {
 	"name": "file",
 	"version": "0.0.1",
-	"buildTimestamp": "201911040610",
+	"buildTimestamp": "201911140600",
 	"scmRevision": "",
 	"libraries": [
 		{
-			"name": "sap.ui.unified",
+			"name": "sap.ui.layout",
 			"version": "1.71.3",
-			"buildTimestamp": "201911040610",
+			"buildTimestamp": "201911140600",
 			"scmRevision": ""
 		},
 		{
 			"name": "sap.ui.core",
 			"version": "1.71.3",
-			"buildTimestamp": "201911040610",
-			"scmRevision": ""
-		},
-		{
-			"name": "sap.ui.layout",
-			"version": "1.71.3",
-			"buildTimestamp": "201911040610",
+			"buildTimestamp": "201911140600",
 			"scmRevision": ""
 		},
 		{
 			"name": "sap.m",
 			"version": "1.71.3",
-			"buildTimestamp": "201911040610",
+			"buildTimestamp": "201911140600",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.71.3",
+			"buildTimestamp": "201911140600",
 			"scmRevision": ""
 		},
 		{
 			"name": "pdf",
-			"version": "1.1.5",
-			"buildTimestamp": "201911040610",
+			"version": "1.1.6",
+			"buildTimestamp": "201911140600",
 			"scmRevision": ""
 		}
 	]

@@ -5,10 +5,10 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>ui5.pdf Demo</title>
 		<script id="sap-ui-bootstrap"
-			src="./dist/resources/sap-ui-core.js"
+			src="resources/sap-ui-core.js"
 			data-sap-ui-theme="sap_belize"
 			data-sap-ui-resourceroots='{
-										"bitech.demo.ui5.pdf": "./dist"
+										"bitech.demo.ui5.pdf": "./"
 										}'
 			data-sap-ui-compatVersion="edge"
 			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
@@ -17,8 +17,6 @@
 		</script>
 	</head>
 	<body class="sapUiBody">
-		<div data-sap-ui-component data-name="bitech.demo.ui5.pdf" data-id="container" data-settings='{"id" : "file"}'>
-			PDF-Viewer wird geladen
-		</div>
+		<div data-sap-ui-component data-name="bitech.demo.ui5.pdf" data-id="container" data-settings='{"id" : "file"}'></div>
 	</body>
 </html>

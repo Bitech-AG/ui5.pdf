@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(Control) {
     'use strict';
     
-    return Control.extend("bitech.ui5.pdf.StickyContainer", {
+    return Control.extend("bitech.ui5.pdf.Container", {
         metadata: {
             properties: {
                 width: "sap.ui.core.CSSSize",
@@ -41,12 +41,12 @@ sap.ui.define([
 
             oRm.write(">");
             
-            oControl._renderAggregation("header", "bitechUi5PdfStickyHeader", oRm, oControl);
+            oControl._renderAggregation("header", "bitechUi5PdfContainerHeader", oRm, oControl);
 
             var oContent = oControl.getAggregation("content");
             if(oContent) {
                 oRm.write("<div ");
-                oRm.addClass("bitechUi5PdfStickyContent");
+                oRm.addClass("bitechUi5PdfContainerContent");
                 oRm.writeClasses();
                 oRm.write(">");
 
@@ -56,8 +56,8 @@ sap.ui.define([
 
                 oRm.write("</div>");
             }
-            
-            oControl._renderAggregation("footer", "bitechUi5PdfStickyFooter", oRm, oControl);
+
+            oControl._renderAggregation("footer", "bitechUi5PdfContainerFooter", oRm, oControl);
 
             oRm.write("</div>");
         },

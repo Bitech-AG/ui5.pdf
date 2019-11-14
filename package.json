@@ -4,7 +4,7 @@
   "description": "Demo application for bitech.ui5.pdf library",
   "private": false,
   "devDependencies": {
-    "@ui5/cli": "1.11.1"
+    "@ui5/cli": "1.12.0"
   },
   "scripts": {
     "build": "ui5 build --clean-dest --all",
@@ -15,6 +15,6 @@
     "@openui5/sap.ui.core": "^1.66.00",
     "@openui5/sap.ui.unified": "^1.60.18",
     "@openui5/themelib_sap_belize": "^1.60.18",
-    "@bitech-ag/ui5.pdf": "latest"
+    "@bitech-ag/ui5.pdf": "^1.1.6"
   }
 }
