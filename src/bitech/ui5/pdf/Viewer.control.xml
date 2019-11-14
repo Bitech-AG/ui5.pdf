@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:pdf="bitech.ui5.pdf" xmlns:uni="sap.ui.unified">
-    <pdf:StickyContainer width="{$this>width}" height="{$this>height}">
+    <pdf:Container width="{$this>width}" height="{$this>height}">
         <pdf:header>
             <Toolbar>
                 <Button id="firstButton" icon="sap-icon://back-to-top" tooltip="{i18n>first}" visible="false" press="_toFirstPage" />
@@ -23,5 +23,5 @@
         <pdf:content>
             <pdf:Document busy="{$this>busy}" id="Document" src="{$this>src}" noDataText="{$this>noDataText}" pageSelected="_onPageSelected"></pdf:Document>
         </pdf:content>
-    </pdf:StickyContainer>
+    </pdf:Container>
 </core:FragmentDefinition>

@@ -6,7 +6,7 @@
  @import "../../../../../sap/ui/core/themes/base/global.less";
  
 @bitechUi5PdfPreviewBorderWidth: 0.5rem;
-@bitechUi5PdfStickybackground: whitesmoke;
+@bitechUi5PdfContainerBackground: whitesmoke;
 
 .bitechUi5PdfPage {
 	margin: 0 auto;
@@ -64,15 +64,19 @@
 .bitechUi5PdfPageNumInput {
 	width: 4em;
 }
-.bitechUi5PdfStickyHeader {
-	position: sticky;
+.bitechUi5PdfContainerHeader {
+	position: absolute;
 	top: 0;
-	background-color: ghostwhite;
+	left: 0;
+	right: 0;
+	background-color: @bitechUi5PdfContainerBackground;
 }
-.bitechUi5PdfStickyContent {
+.bitechUi5PdfContainerContent {
 	height: ~"calc(100% - 48px)";
+	position: relative;
+	top: 48px;
 }
-.bitechUi5PdfStickyFooter {
+.bitechUi5PdfContainerFooter {
 	position: absolute;
 	bottom: 0;
 	left: 0;
