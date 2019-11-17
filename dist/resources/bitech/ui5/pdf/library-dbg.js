@@ -28,7 +28,7 @@ sap.ui.define([], function () {
 				"src.bitech.ui5.pdf.Viewer"
 			],
 			noLibraryCSS: false,
-			version: "1.1.6"
+			version: "1.1.7"
 		});
 
 		return bitech.ui5.pdf;

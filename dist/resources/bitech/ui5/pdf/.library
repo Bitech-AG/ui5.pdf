@@ -2,7 +2,7 @@
 <library xmlns="http://www.sap.com/sap.ui.library.xsd">
 
 	<name>bitech.ui5.pdf</name>
-	<version>1.1.6</version>
+	<version>1.1.7</version>
 
 	<documentation>PDF viewer</documentation>
 

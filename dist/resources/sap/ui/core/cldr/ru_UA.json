@@ -4352,7 +4352,7 @@
 				"unitPattern-count-one": "{0} нед.",
 				"unitPattern-count-few": "{0} нед.",
 				"unitPattern-count-many": "{0} нед.",
-				"unitPattern-count-other": "{0} не��.",
+				"unitPattern-count-other": "{0} нед.",
 				"perUnitPattern": "{0}/нед"
 			},
 			"duration-day": {

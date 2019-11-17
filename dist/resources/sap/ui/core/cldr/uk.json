@@ -4373,7 +4373,7 @@
 			},
 			"duration-nanosecond": {
 				"displayName": "нс",
-				"unitPattern-count-one": "{0} нс",
+				"unitPattern-count-one": "{0} ��с",
 				"unitPattern-count-few": "{0} нс",
 				"unitPattern-count-many": "{0} нс",
 				"unitPattern-count-other": "{0} нс"
