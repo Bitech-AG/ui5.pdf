@@ -56,7 +56,7 @@ sap.ui.define([
 				// Determination of scale
 				var oParent = oDomRef.parentNode;
 
-				oViewport = oPage.getViewport({ scale: 1, });
+				oViewport = oPage.getViewport({ scale: 1 });
 				
 				if(oParent.localName === "aside") {
 					// determine preview scale
@@ -66,14 +66,14 @@ sap.ui.define([
 					// determine page scale
 					nScale = this.getParent().getScale();
 
-					nScale = typeof nScale != "undefined" ? nScale : oDomRef.clientWidth / oViewport.width;
+					nScale = typeof nScale !== "undefined" ? nScale : oDomRef.clientWidth / oViewport.width;
 
 					this.fireEvent("scaleDetermined", {
 						scale: nScale
 					});
 				}
 					
-				oViewport = oPage.getViewport({ scale: nScale, });
+				oViewport = oPage.getViewport({ scale: nScale });
 
 				// Prepare canvas using PDF page dimensions
 				var oCanvas = oDomRef.firstChild;

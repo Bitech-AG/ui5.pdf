@@ -31,6 +31,7 @@ sap.ui.define([], function () {
 			version: "${version}"
 		});
 
+		/* global bitech */
 		return bitech.ui5.pdf;
 	},
 	false); //bExport

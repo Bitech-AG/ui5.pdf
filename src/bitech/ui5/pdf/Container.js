@@ -1,7 +1,7 @@
 sap.ui.define([
-    'sap/ui/core/Control'
+    "sap/ui/core/Control"
 ], function(Control) {
-    'use strict';
+    "use strict";
     
     return Control.extend("bitech.ui5.pdf.Container", {
         metadata: {
@@ -26,16 +26,16 @@ sap.ui.define([
             defaultAggregation: "content"
         },
 
-        renderer(oRm, oControl) {
+        renderer: function(oRm, oControl) {
             oRm.write("<div ");
             oRm.writeControlData(oControl);
 
             // render style attribute
             if(oControl.getWidth()) {
-                oRm.addStyle('width', oControl.getWidth()); 
+                oRm.addStyle("width", oControl.getWidth()); 
             }
             if(oControl.getHeight()) {
-                oRm.addStyle('height', oControl.getHeight()); 
+                oRm.addStyle("height", oControl.getHeight()); 
             }
             oRm.writeStyles();
 

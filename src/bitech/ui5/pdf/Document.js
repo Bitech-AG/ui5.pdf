@@ -46,7 +46,7 @@ sap.ui.define([
 			this.setPage(oPage.getNumber());
 
 			oPreviewPages.forEach(function (oPagePreview) {
-				if (oPagePreview != oPage) {
+				if (oPagePreview !== oPage) {
 					oPagePreview.removeStyleClass("bitechUi5PdfSelected");
 				}
 			});
@@ -62,7 +62,7 @@ sap.ui.define([
 			}
 
 			var oPage = oPages[iPageNumber - 1],
-				oDomPage = oPage.getDomRef()
+				oDomPage = oPage.getDomRef();
 
 			oDomPage.scrollIntoView();
 
@@ -91,7 +91,7 @@ sap.ui.define([
 
 				for (var i = 1; i <= oPdf.numPages; ++i) {
 					oPage = new Page();
-					oPagePreview = new Page()
+					oPagePreview = new Page();
 
 					oPage.setBusy(true);
 					oPagePreview.setBusy(true);

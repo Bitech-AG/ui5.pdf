@@ -72,7 +72,7 @@ sap.ui.define([
             var oDocument = oEvent.getSource();
 
             this.getResourceBundle().then(function (oBundle) {
-                var oPageCountLabel = this.byId("pageCountLabel")
+                var oPageCountLabel = this.byId("pageCountLabel"),
                     oPageInput = this.byId("pageInput"),
                     oFirstButton = this.byId("firstButton"),
                     oPrevButton = this.byId("prevButton"),
@@ -97,7 +97,7 @@ sap.ui.define([
                     getSource: function () {
                         return oDocument;
                     }
-                })
+                });
             }.bind(this));
         },
 
@@ -131,11 +131,11 @@ sap.ui.define([
             }
             this.setBusy(true);
 
-            oReader.onload = function (oEvent) {
+            oReader.onload = function (oLoadEvent) {
                 var oDocument = this.byId("Document");
     
                 oDocument.setScale();
-                this.setSrc(oEvent.target.result);
+                this.setSrc(oLoadEvent.target.result);
             }.bind(this);
 
             this.setTitle(oFiles[0].name);
