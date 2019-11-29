@@ -2,16 +2,16 @@
     <pdf:Container width="{$this>width}" height="{$this>height}">
         <pdf:header>
             <Toolbar>
-                <Button id="firstButton" icon="sap-icon://back-to-top" tooltip="{i18n>first}" visible="false" press="_toFirstPage" />
-                <Button id="prevButton" icon="sap-icon://arrow-top" tooltip="{i18n>prev}" visible="false"  press="_toPrevPage" />
+                <Button id="firstButton" icon="sap-icon://back-to-top" tooltip="{bitech.ui5.pdf.i18n>first}" visible="false" press="_toFirstPage" />
+                <Button id="prevButton" icon="sap-icon://arrow-top" tooltip="{bitech.ui5.pdf.i18n>prev}" visible="false"  press="_toPrevPage" />
                 <MaskInput id="pageInput" value="1"  mask="999" placeholderSymbol=" " class="bitechUi5PdfPageNumInput" change="_onChangePageNumber" visible="false" />
-                <Label id="pageCountLabel" text="{i18n>pageCountText}" visible="false" />
-                <Button id="nextButton" icon="sap-icon://arrow-bottom" tooltip="{i18n>next}" visible="false" press="_toNextPage" />
-                <Button id="lastButton" icon="sap-icon://download" tooltip="{i18n>last}" visible="false"  press="_toLastPage" />
+                <Label id="pageCountLabel" text="{bitech.ui5.pdf.i18n>pageCountText}" visible="false" />
+                <Button id="nextButton" icon="sap-icon://arrow-bottom" tooltip="{bitech.ui5.pdf.i18n>next}" visible="false" press="_toNextPage" />
+                <Button id="lastButton" icon="sap-icon://download" tooltip="{bitech.ui5.pdf.i18n>last}" visible="false"  press="_toLastPage" />
 
-                <Button id="zoomOut" icon="sap-icon://zoom-out" tooltip="{i18n>zoomOut}" press="_zoomOut" visible="false" class="bitechUi5PdfZoomOut" />
+                <Button id="zoomOut" icon="sap-icon://zoom-out" tooltip="{bitech.ui5.pdf.i18n>zoomOut}" press="_zoomOut" visible="false" class="bitechUi5PdfZoomOut" />
                 <Input id="zoomInput" value="{$this>scale}" width="5rem" change="_onChangeZoom" visible="false" />
-                <Button id="zoomIn" icon="sap-icon://zoom-in" tooltip="{i18n>zoomIn}" press="_zoomIn" visible="false" />
+                <Button id="zoomIn" icon="sap-icon://zoom-in" tooltip="{bitech.ui5.pdf.i18n>zoomIn}" press="_zoomIn" visible="false" />
 
                 <ToolbarSpacer />
                 <Title text="{$this>title}" visible="{= ${$this>title} ? true : false}" level="H1" textAlign="Center" titleStyle="H1" />

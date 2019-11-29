@@ -39,14 +39,14 @@ sap.ui.define([
 		init: function () {
 		},
 
-		onPageClick: function(oEvent) {
+		onPageClick: function (oEvent) {
 			var oPreviewPages = this.getAggregation("_previewPages"),
 				oPage = oEvent.getSource();
 
 			this.setPage(oPage.getNumber());
 
-			oPreviewPages.forEach(function(oPagePreview) {
-				if(oPagePreview != oPage) {
+			oPreviewPages.forEach(function (oPagePreview) {
+				if (oPagePreview != oPage) {
 					oPagePreview.removeStyleClass("bitechUi5PdfSelected");
 				}
 			});
@@ -77,20 +77,9 @@ sap.ui.define([
 				oBundle = oCore.getLibraryResourceBundle("mozilla.pdfjs"),
 				sModulePath;
 
-			//if(oBundle) {
-				// library is bounded
-				sModulePath = oBundle.oUrlInfo.url.replace("messagebundle.properties", "");
+			// library is bounded
+			sModulePath = oBundle.oUrlInfo.url.replace("messagebundle.properties", "");
 
-			/*} else {
-				for(var i=0; i < document.scripts.length; ++i) {
-					if(document.scripts[i].src.search("/mozilla/pdfjs") > - 1) {
-						sModulePath = document.scripts[4].src.replace(window.location.origin, "").replace("library-preload.js", "");
-						console.log(sModulePath);
-						break;
-					}
-				}
-
-			}*/
 			/* global pdfjsLib:true */
 			// pdf.js version v 2.1.266
 			pdfjsLib.GlobalWorkerOptions.workerSrc = sModulePath + "build/pdf.worker.min.js";

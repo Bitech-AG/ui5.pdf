@@ -1,6 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/XMLComposite"
-], function (Composite) {
+    "sap/ui/core/XMLComposite",
+    "sap/ui/model/resource/ResourceModel"
+], function (Composite, ResourceModel) {
     return Composite.extend("bitech.ui5.pdf.Viewer", {
         metadata: {
             properties: {
@@ -26,7 +27,12 @@ sap.ui.define([
         fragment: "bitech.ui5.pdf.Viewer",
 
         init: function () {
-            var oDocument = this.byId("Document");
+            var oDocument = this.byId("Document"),
+                oI18n = new ResourceModel({
+                    bundleName: "bitech.ui5.pdf.messagebundle"
+                });
+            
+            this.setModel(oI18n, "bitech.ui5.pdf.i18n");
 
             oDocument.attachEvent("documentLoaded", null, this._onDocumentLoaded.bind(this));
             oDocument.attachEvent("drawn", null, this._onDocumentDrawn.bind(this));
